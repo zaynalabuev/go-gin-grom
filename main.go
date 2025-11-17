@@ -10,7 +10,7 @@ import (
 
 func main() {
 
-	config.ConnecctPostgres()
+	config.ConnectPostgres()
 	fmt.Println("подключено", config.DB != nil)
 	config.DB.AutoMigrate(&models.Student{}, &models.Group{})
 	routers.Routers()

@@ -19,7 +19,7 @@ func CreateStudent(c *gin.Context) {
 	c.JSON(201, student)
 }
 
-func Pingpong(c *gin.Context) {
+func PingPong(c *gin.Context) {
 
 	c.JSON(200, gin.H{"message": "pong"})
 }

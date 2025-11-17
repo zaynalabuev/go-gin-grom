@@ -28,7 +28,7 @@ func GetGroupsByID(c *gin.Context) {
 	}
 	c.JSON(200, groups)
 }
-func UpgradeGroupstById(c *gin.Context) {
+func UpgradeGroupsById(c *gin.Context) {
 	var groups models.Group
 	id := c.Param("id")
 	if err := config.DB.First(&groups, id).Error; err != nil {

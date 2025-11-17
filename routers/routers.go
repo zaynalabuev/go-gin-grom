@@ -7,7 +7,7 @@ import (
 
 func Routers() {
 	r := gin.Default()
-	r.GET("/ping", handlers.Pingpong)
+	r.GET("/ping", handlers.PingPong)
 	r.POST("/students", handlers.CreateStudent)
 	r.GET("/students/:id", handlers.GetByID)
 	r.PATCH("/students/:id", handlers.UpgradeStudentById)
@@ -15,7 +15,7 @@ func Routers() {
 	r.GET("/students", handlers.GetAllStudents)
 	r.POST("/groups", handlers.CreateGroup)
 	r.GET("/groups/:id", handlers.GetGroupsByID)
-	r.PATCH("/groups/:id", handlers.UpgradeGroupstById)
+	r.PATCH("/groups/:id", handlers.UpgradeGroupsById)
 	r.DELETE("/groups/:id", handlers.DeleteGroupsById)
 	r.Run()
 }
